@@ -29,7 +29,7 @@ const Login = () => {
           password: "",
         });
         toast.success("User Login Successfull");
-        navigate("/");
+        navigate("/doctor");
       }
     } catch (error) {
       toast.error("There was some problem while logging");

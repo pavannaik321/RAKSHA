@@ -6,8 +6,9 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
+import Doctor from "./pages/Doctor";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://raksha-five.vercel.app";
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/doctor" element={<Doctor />} />
       </Routes>
       </>
   );
