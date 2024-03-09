@@ -13,7 +13,7 @@ app.use(cors(
 ))
 app.use(express.json())
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Hello From Express App" });
 });
 
