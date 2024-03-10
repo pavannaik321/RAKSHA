@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:8001');
 
 const Display = () => {
+  useEffect(()=>{
+    socket.emit("connection")
+  },[])
   return (
     <div className="flex flex-col h-screen">
       <div className="flex justify-center items-center h-3/4 bg-gray-200">
